@@ -139,17 +139,17 @@ remove all unused images
 
 # Containers
 
-list running containers
-
-    docker ps
-
-
-list all containers including stopped ones
+list available (all) containers
 
     docker ps -a
 
     # docker ps     list containers (default: running only)
-    # -a            show all containers — running, stopped, and exited
+    # -a            show all — running, stopped, and exited
+
+
+list only running containers
+
+    docker ps
 
 
 stop a container gracefully
