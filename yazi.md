@@ -10,14 +10,16 @@ open at a specific path
 
 open and change shell directory on exit (add to .bashrc/.zshrc)
 
-    function y() {
-        local tmp="$(mktemp -t yazi-cwd)"
-        yazi "$@" --cwd-file="$tmp"
-        if cwd="$(< "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-            cd "$cwd"
-        fi
-        rm -f "$tmp"
-    }
+
+function y() {                                                                              
+      local tmp="$(mktemp "${TMPDIR:-/tmp}/yazi-cwd.XXXXXX")"                                 
+      yazi "$@" --cwd-file="$tmp"                                                             
+      if cwd="$(< "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then                     
+          cd "$cwd"                                                                           
+      fi
+      rm -f "$tmp"                                                                            
+  }
+
 
 ## navigation
 

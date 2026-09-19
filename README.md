@@ -37,17 +37,17 @@ custom-dir = ~/.eg
 | file | find | fzf | getfacl | gh |
 | git | gosu | head | ip | jobs |
 | jq | kill | ldd | lftp | ln |
-| lsblk | lsof | mamba | mc | mmv |
-| mount | mtr | nc | netstat | nmap |
-| open | openssh | pdftk | ping | printf |
-| ps | read | readlink | rename | rsync |
-| screen | script | sed | set | sort |
-| split | srun | ssh | ssh-keygen | strace |
-| su | sudo | tail | tar | tee |
-| tmux | tr | trap | tree | ulimit |
-| umount | uniq | usermod | vim | wait |
-| wc | wget | xargs | xset | xxd |
-| yazi | zoxide | | | |
+| lsblk | lsof | magick | mamba | mc |
+| mmv | mount | mtr | nc | netstat |
+| nmap | open | openssh | pdftk | ping |
+| printf | ps | read | readlink | rename |
+| rsync | screen | script | sed | set |
+| sort | split | srun | ssh | ssh-keygen |
+| strace | su | sudo | tail | tar |
+| tee | tmux | tr | trap | tree |
+| ulimit | umount | uniq | usermod | vim |
+| wait | wc | wget | xargs | xset |
+| xxd | yazi | zoxide | | |
 
 ## File format
 
