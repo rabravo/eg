@@ -46,8 +46,8 @@ custom-dir = ~/.eg
 | strace | su | sudo | tail | tar |
 | tee | tmux | tr | trap | tree |
 | ulimit | umount | uniq | usermod | vim |
-| wait | wc | wget | xargs | xset |
-| xxd | yazi | zoxide | | |
+| wait | wc | wget | xargs | xl-formulas |
+| xl-shortcuts | xset | xxd | yazi | zoxide |
 
 ## File format
 
