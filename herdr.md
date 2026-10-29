@@ -1,5 +1,81 @@
 # herdr
 
+# Typical usage: start Claude Code in a sibling pane
+
+launch herdr from Ghostty (vanilla config)
+
+    open -n -a Ghostty --args --config-file=$HOME/.config/ghostty/config-herdr
+
+verify you are inside a Herdr-managed pane
+
+    test "${HERDR_ENV:-}" = 1 && echo "Inside Herdr"
+
+split a new pane to the right (stay focused here)
+
+    herdr pane split --current --direction right --cwd "$PWD" --no-focus
+
+start Claude in the new pane (use pane_id from split result)
+
+    herdr agent start coder --kind claude --pane w1:p2
+
+send a prompt and wait for it to finish
+
+    herdr agent prompt coder "Review the current diff and list actionable findings." --wait
+
+read the output
+
+    herdr agent read coder --source recent-unwrapped --lines 100
+
+send a key to unblock an agent waiting for approval
+
+    herdr agent send-keys coder enter
+
+install the Claude Code integration (once, outside Herdr)
+
+    herdr integration install claude
+
+
+# Keyboard Shortcuts (prefix: ctrl+s)
+
+split pane horizontally (below)
+
+    ctrl+s  -
+
+split pane vertically (right)
+
+    ctrl+s  %
+
+focus pane left / down / up / right
+
+    ctrl+s  h / j / k / l
+
+new tab
+
+    ctrl+s  c
+
+previous / next tab
+
+    ctrl+s  p / n
+
+switch to tab by number
+
+    ctrl+s  1..9
+
+close tab
+
+    ctrl+s  shift+x
+
+close pane
+
+    ctrl+s  x
+
+reload config
+
+    ctrl+s  r
+
+
+# Basic commands
+
 launch or attach to the persistent session
 
     herdr
