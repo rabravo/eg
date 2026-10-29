@@ -49,6 +49,10 @@ focus pane left / down / up / right
 
     ctrl+s  h / j / k / l
 
+cycle to next / previous pane
+
+    ctrl+s  tab / shift+tab
+
 new tab
 
     ctrl+s  c
