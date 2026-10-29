@@ -77,6 +77,10 @@ reload config
 
     ctrl+s  r
 
+open workspace picker
+
+    ctrl+s  w
+
 
 # Basic commands
 
@@ -141,7 +145,11 @@ delete a stopped session
 
 # Workspaces
 
-list workspaces
+list workspaces (pretty table)
+
+    hdwl
+
+list workspaces (raw)
 
     herdr workspace list
 
