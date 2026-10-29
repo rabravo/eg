@@ -156,7 +156,7 @@ list workspaces (raw)
 
 create a workspace
 
-    herdr workspace create
+    hdwc
 
 
 focus a workspace by id
