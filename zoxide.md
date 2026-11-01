@@ -10,6 +10,17 @@ jump interactively using fzf (requires fzf)
     zi foo
 
 
+zi with no argument: browse every directory zoxide knows in an fzf list, type to filter, Enter to cd,
+Esc to cancel (needs fzf; plain z never needs it)
+
+    zi
+
+
+zi with several words: all of them must match the path, in order, so this finds .../jmantilla/tools
+
+    zi jman tools
+
+
 jump to an exact path (bypasses ranking)
 
     z ~/projects/my-repo
