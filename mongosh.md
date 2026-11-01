@@ -1,30 +1,3 @@
-# mongosh
-
-start the MongoDB server (macOS with Homebrew)
-
-    brew services start mongodb-community
-
-
-stop the MongoDB server
-
-    brew services stop mongodb-community
-
-
-restart the MongoDB server
-
-    brew services restart mongodb-community
-
-
-start MongoDB (Linux systemd)
-
-    sudo systemctl start mongod
-
-
-stop MongoDB (Linux systemd)
-
-    sudo systemctl stop mongod
-
-
 connect to local MongoDB instance
 
     mongosh
@@ -53,6 +26,11 @@ list all databases
 create or switch to a database
 
     use dbname
+
+
+show current database
+
+    db
 
 
 drop the current database
@@ -93,11 +71,6 @@ query all documents in a collection
 query with a filter
 
     db.collectionname.find({ key: "value" })
-
-
-query and pretty-print results
-
-    db.collectionname.find().pretty()
 
 
 limit results
@@ -155,12 +128,11 @@ create a user with read/write access
     db.createUser({ user: "username", pwd: "password", roles: [{ role: "readWrite", db: "dbname" }] })
 
 
-show current database
+set feature compatibility version (used when upgrading)
 
-    db
+    db.adminCommand({ setFeatureCompatibilityVersion: "8.3", confirm: true })
 
 
 exit mongosh
 
     exit
-
