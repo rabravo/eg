@@ -39,11 +39,11 @@ install the Claude Code integration (once, outside Herdr)
 
 split pane horizontally (below)
 
-    ctrl+s  -
+    ctrl+s  shift+_
 
 split pane vertically (right)
 
-    ctrl+s  %
+    ctrl+s  shift+%
 
 focus pane left / down / up / right
 
@@ -322,6 +322,9 @@ stop the running server
 reload config.toml without restarting
 
     herdr server reload-config
+
+    # Note: some settings (e.g. kitty_graphics) require a full server restart to take effect:
+    #   herdr server stop && herdr
 
 
 print the live session snapshot
