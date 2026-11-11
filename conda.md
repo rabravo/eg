@@ -224,3 +224,8 @@ examine full conda configuration
     conda config --show
 
 
+register a custom directory so envs created with -p get a name in conda env list
+
+    conda config --append envs_dirs /path/to/envs
+
+

@@ -2,6 +2,24 @@
 
 # Typical usage: start Claude Code in a sibling pane
 
+script — split a pane, start Claude, send a prompt, wait, read output
+
+    #!/usr/bin/env bash
+    PANE=$(herdr pane split --current --direction right --cwd "$PWD" --no-focus)
+    herdr agent start coder --kind claude --pane "$PANE"
+    herdr agent prompt coder "Summarize what changed in the last 3 commits." --wait
+    herdr agent read coder --source recent-unwrapped --lines 50
+
+unblock Claude if it is waiting for approval (tool call, confirmation, etc.)
+
+    herdr agent send-keys coder enter
+
+install the Claude integration once before first use (run outside Herdr)
+
+    herdr integration install claude
+
+
+
 launch herdr from Ghostty (vanilla config)
 
     open -n -a Ghostty --args --config-file=$HOME/.config/ghostty/config-herdr
